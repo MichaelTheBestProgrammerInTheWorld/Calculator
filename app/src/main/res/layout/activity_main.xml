@@ -15,7 +15,8 @@
         android:background="@color/colorDarkGray"
         android:textColor="@android:color/white"
         android:textSize="80sp"
-        android:text="0"
+        android:hint="0"
+        android:textColorHint="@android:color/white"
         android:layoutDirection="rtl"/>
 
 
@@ -47,7 +48,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="+/-" />
+                android:text="+/-"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_percent"
@@ -82,7 +84,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="7" />
+                android:text="7"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_8"
@@ -91,7 +94,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="8" />
+                android:text="8"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_9"
@@ -100,7 +104,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="9" />
+                android:text="9"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_multiply"
@@ -125,7 +130,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="4" />
+                android:text="4"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_5"
@@ -134,7 +140,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="5" />
+                android:text="5"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_6"
@@ -143,7 +150,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="6" />
+                android:text="6"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_minus"
@@ -168,7 +176,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="1" />
+                android:text="1"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_2"
@@ -177,7 +186,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="2" />
+                android:text="2"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_3"
@@ -186,7 +196,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="3" />
+                android:text="3"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_plus"
@@ -211,7 +222,8 @@
                 android:layout_weight="2"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="0" />
+                android:text="0"
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_point"
@@ -220,7 +232,8 @@
                 android:layout_weight="1"
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
-                android:text="." />
+                android:text="."
+                android:onClick="buNumberEvent"/>
 
             <Button
                 android:id="@+id/button_equal"
