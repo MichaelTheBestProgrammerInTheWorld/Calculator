@@ -4,22 +4,29 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
+import io.kaen.dagger.BadSyntaxException
+import io.kaen.dagger.ExpressionParser
 import kotlinx.android.synthetic.main.activity_main.*
+
+
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }
 
-    fun buNumberEvent(view:View){
+    fun buttonsOnClick(view: View) {
 
         //val entryData = equation_edt.text
         val buSelect = view as Button
-        var buClickValue:String = equation_edt.text.toString()
-        when(buSelect.id){
+        var buClickValue: String = equation_edt.text.toString()
+        when (buSelect.id) {
 
+            //numbers
             button_0.id -> {
                 buClickValue += "0"
             }
@@ -53,14 +60,52 @@ class MainActivity : AppCompatActivity() {
             button_0.id -> {
                 buClickValue += "0"
             }
+            //operators
             button_point.id -> {
-                //TODO: TO NOT ALLOW MORE THAN 1 POINT
                 buClickValue += "."
             }
             button_z.id -> {
-                buClickValue = "-" + buClickValue
+                //buClickValue = "-" + buClickValue
+                if (buClickValue.contains('-')){
+
+                } else {
+                    buClickValue = "-" + buClickValue
+                }
+            }
+            button_plus.id -> {
+                buClickValue += "+"
+            }
+            button_minus.id -> {
+                buClickValue += "-"
+            }
+            button_multiply.id -> {
+                buClickValue += "*"
+            }
+            button_divide.id -> {
+                buClickValue += "/"
+            }
+            button_percent.id -> {
+                buClickValue += "%"
+            }
+            button_ac.id -> {
+                //buClickValue += "+"
+                buClickValue = ""
             }
         }
         equation_edt.setText(buClickValue)
     }
+
+    fun equalOnClick(view: View) {
+
+        val parser = ExpressionParser()
+        try {
+            val result = parser.evaluate(equation_edt.text.toString())
+            equation_edt.setText(result.toString())
+        } catch (e: BadSyntaxException){
+            Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+        } catch (e: NumberFormatException){
+            Toast.makeText(this, e.message , Toast.LENGTH_LONG).show()
+        }
+    }
+
 }

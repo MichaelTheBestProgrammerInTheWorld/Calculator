@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -17,7 +17,12 @@
         android:textSize="80sp"
         android:hint="0"
         android:textColorHint="@android:color/white"
-        android:layoutDirection="rtl"/>
+        android:gravity="end"
+
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="20sp"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeStepGranularity="20sp"/>
 
 
     <TableLayout
@@ -38,7 +43,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="AC" />
+                android:text="AC"
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_z"
@@ -49,7 +55,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
                 android:text="+/-"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_percent"
@@ -59,7 +65,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="%" />
+                android:text="%"
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_divide"
@@ -69,7 +76,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="/" />
+                android:text="/"
+                android:onClick="buttonsOnClick"/>
         </TableRow>
 
         <TableRow
@@ -85,7 +93,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="7"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_8"
@@ -95,7 +103,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="8"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_9"
@@ -105,7 +113,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="9"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_multiply"
@@ -115,7 +123,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="*" />
+                android:text="*"
+                android:onClick="buttonsOnClick"/>
         </TableRow>
 
         <TableRow
@@ -131,7 +140,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="4"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_5"
@@ -141,7 +150,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="5"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_6"
@@ -151,7 +160,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="6"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_minus"
@@ -161,7 +170,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="-" />
+                android:text="-"
+                android:onClick="buttonsOnClick"/>
         </TableRow>
 
         <TableRow
@@ -177,7 +187,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="1"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_2"
@@ -187,7 +197,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="2"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_3"
@@ -197,7 +207,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="3"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_plus"
@@ -207,7 +217,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="+" />
+                android:text="+"
+                android:onClick="buttonsOnClick"/>
         </TableRow>
 
         <TableRow
@@ -223,7 +234,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="0"
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_point"
@@ -233,7 +244,7 @@
                 android:background="@color/colorLightGray"
                 android:textSize="40sp"
                 android:text="."
-                android:onClick="buNumberEvent"/>
+                android:onClick="buttonsOnClick"/>
 
             <Button
                 android:id="@+id/button_equal"
@@ -243,7 +254,8 @@
                 android:background="@color/colorOrange"
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
-                android:text="=" />
+                android:text="="
+                android:onClick="equalOnClick"/>
         </TableRow>
     </TableLayout>
 </LinearLayout>
