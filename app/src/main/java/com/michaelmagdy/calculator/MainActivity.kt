@@ -2,6 +2,7 @@ package com.michaelmagdy.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.SoundEffectConstants
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     fun buttonsOnClick(view: View) {
 
+        view.playSoundEffect(SoundEffectConstants.CLICK);
         //val entryData = equation_edt.text
         val buSelect = view as Button
         var buClickValue: String = equation_edt.text.toString()
@@ -97,6 +99,7 @@ class MainActivity : AppCompatActivity() {
 
     fun equalOnClick(view: View) {
 
+        view.playSoundEffect(SoundEffectConstants.CLICK);
         val parser = ExpressionParser()
         try {
             val result = parser.evaluate(equation_edt.text.toString())

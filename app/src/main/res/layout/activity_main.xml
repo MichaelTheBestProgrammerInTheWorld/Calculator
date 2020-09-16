@@ -44,7 +44,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="40sp"
                 android:text="AC"
-                android:onClick="buttonsOnClick"/>
+                android:onClick="buttonsOnClick" />
 
             <Button
                 android:id="@+id/button_z"
